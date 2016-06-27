@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C0w-eV-8Hm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C0w-eV-8Hm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--SemesterTVC-->
         <scene sceneID="YXZ-hl-li2">
             <objects>
-                <tableViewController id="PXf-FF-gVS" sceneMemberID="viewController">
+                <tableViewController id="PXf-FF-gVS" customClass="SemesterTVC" customModule="Timetable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ce-dK-a5I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                     <navigationItem key="navigationItem" id="vgC-aJ-2ZZ">
                         <barButtonItem key="rightBarButtonItem" title="+" systemItem="add" id="1S5-Vu-wQ1">
                             <connections>
-                                <segue destination="nge-Kl-rvg" kind="show" id="sHJ-x6-eBs"/>
+                                <segue destination="nge-Kl-rvg" kind="show" identifier="Add Semester" id="sHJ-x6-eBs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn0-2n-I7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="402"/>
+            <point key="canvasLocation" x="1923" y="402"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G28-57-Ip8">
