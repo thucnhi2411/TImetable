@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		00AADB891D215A0800512785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AADB881D215A0800512785 /* AppDelegate.swift */; };
 		00AADB8E1D215A0800512785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AADB8C1D215A0800512785 /* Main.storyboard */; };
-		00AADB911D215A0800512785 /* Timetable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00AADB8F1D215A0800512785 /* Timetable.xcdatamodeld */; };
 		00AADB931D215A0800512785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AADB921D215A0800512785 /* Assets.xcassets */; };
 		00AADB961D215A0800512785 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AADB941D215A0800512785 /* LaunchScreen.storyboard */; };
 		00AADB9E1D215FA800512785 /* SemesterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AADB9D1D215FA800512785 /* SemesterTVC.swift */; };
+		0424F2941D2165690084E86B /* Timetable in Resources */ = {isa = PBXBuildFile; fileRef = 0424F2931D2165690084E86B /* Timetable */; };
+		0424F2981D2166F90084E86B /* SemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424F2971D2166F90084E86B /* SemInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00AADB851D215A0800512785 /* Timetable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timetable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AADB881D215A0800512785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00AADB8D1D215A0800512785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		00AADB901D215A0800512785 /* Timetable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Timetable.xcdatamodel; sourceTree = "<group>"; };
 		00AADB921D215A0800512785 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00AADB951D215A0800512785 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00AADB971D215A0800512785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00AADB9D1D215FA800512785 /* SemesterTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterTVC.swift; sourceTree = "<group>"; };
+		0424F2931D2165690084E86B /* Timetable */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Timetable; sourceTree = "<group>"; };
+		0424F2971D2166F90084E86B /* SemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		00AADB7C1D215A0800512785 = {
 			isa = PBXGroup;
 			children = (
+				0424F2931D2165690084E86B /* Timetable */,
 				00AADB871D215A0800512785 /* Timetable */,
 				00AADB861D215A0800512785 /* Products */,
 			);
@@ -58,10 +61,10 @@
 			children = (
 				00AADB881D215A0800512785 /* AppDelegate.swift */,
 				00AADB8C1D215A0800512785 /* Main.storyboard */,
+				0424F2971D2166F90084E86B /* SemInfo.swift */,
 				00AADB921D215A0800512785 /* Assets.xcassets */,
 				00AADB941D215A0800512785 /* LaunchScreen.storyboard */,
 				00AADB971D215A0800512785 /* Info.plist */,
-				00AADB8F1D215A0800512785 /* Timetable.xcdatamodeld */,
 				00AADB9D1D215FA800512785 /* SemesterTVC.swift */,
 			);
 			path = Timetable;
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0424F2941D2165690084E86B /* Timetable in Resources */,
 				00AADB961D215A0800512785 /* LaunchScreen.storyboard in Resources */,
 				00AADB931D215A0800512785 /* Assets.xcassets in Resources */,
 				00AADB8E1D215A0800512785 /* Main.storyboard in Resources */,
@@ -138,8 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0424F2981D2166F90084E86B /* SemInfo.swift in Sources */,
 				00AADB9E1D215FA800512785 /* SemesterTVC.swift in Sources */,
-				00AADB911D215A0800512785 /* Timetable.xcdatamodeld in Sources */,
 				00AADB891D215A0800512785 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,19 +297,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		00AADB8F1D215A0800512785 /* Timetable.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				00AADB901D215A0800512785 /* Timetable.xcdatamodel */,
-			);
-			currentVersion = 00AADB901D215A0800512785 /* Timetable.xcdatamodel */;
-			path = Timetable.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 00AADB7D1D215A0800512785 /* Project object */;
 }

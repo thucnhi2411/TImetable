@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C0w-eV-8Hm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C0w-eV-8Hm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SemesterTVC-->
@@ -40,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="1190" y="402"/>
         </scene>
-        <!--View Controller-->
+        <!--Sem Info-->
         <scene sceneID="eUf-H7-eOd">
             <objects>
-                <viewController id="nge-Kl-rvg" sceneMemberID="viewController">
+                <viewController id="nge-Kl-rvg" customClass="SemInfo" customModule="Timetable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Np3-Dh-ckp"/>
                         <viewControllerLayoutGuide type="bottom" id="d7c-7N-LCI"/>
@@ -51,12 +52,62 @@
                     <view key="view" contentMode="scaleToFill" id="wEL-No-cds">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pCc-tK-QUG">
+                                <rect key="frame" x="43" y="214" width="515" height="29"/>
+                                <segments>
+                                    <segment title="Spring"/>
+                                    <segment title="Summer"/>
+                                    <segment title="Fall"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SemesterChoice:" destination="nge-Kl-rvg" eventType="valueChanged" id="Z3y-RG-Q0j"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1m5-WN-s6H">
+                                <rect key="frame" x="247" y="340" width="106" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter academic year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsb-4s-RWJ">
+                                <rect key="frame" x="20" y="302" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semester Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-wH-ZdC">
+                                <rect key="frame" x="20" y="118" width="560" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.1529411765" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9uO-wH-ZdC" firstAttribute="centerX" secondItem="wEL-No-cds" secondAttribute="centerX" id="2Ex-0k-KqC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9uO-wH-ZdC" secondAttribute="trailing" id="2Pd-Sf-jhT"/>
+                            <constraint firstItem="1m5-WN-s6H" firstAttribute="leading" secondItem="wEL-No-cds" secondAttribute="leadingMargin" constant="227" id="EaD-Gl-s5j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1m5-WN-s6H" secondAttribute="trailing" constant="227" id="MvR-bJ-vNT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zsb-4s-RWJ" secondAttribute="trailing" id="N40-4z-8Wr"/>
+                            <constraint firstItem="Zsb-4s-RWJ" firstAttribute="top" secondItem="Np3-Dh-ckp" secondAttribute="bottom" constant="238" id="Njd-7g-daw"/>
+                            <constraint firstItem="pCc-tK-QUG" firstAttribute="leading" secondItem="wEL-No-cds" secondAttribute="leadingMargin" constant="135" id="OGC-hZ-wVe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pCc-tK-QUG" secondAttribute="trailing" constant="134" id="UYy-lW-Nmt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Zsb-4s-RWJ" secondAttribute="leading" id="WgE-mn-plh"/>
+                            <constraint firstItem="pCc-tK-QUG" firstAttribute="top" secondItem="Np3-Dh-ckp" secondAttribute="bottom" constant="156" id="chD-tl-H8V"/>
+                            <constraint firstItem="9uO-wH-ZdC" firstAttribute="top" secondItem="Np3-Dh-ckp" secondAttribute="bottom" constant="54" id="clA-sl-nA8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9uO-wH-ZdC" secondAttribute="leading" id="faU-mR-SDo"/>
+                            <constraint firstItem="pCc-tK-QUG" firstAttribute="leading" secondItem="wEL-No-cds" secondAttribute="leadingMargin" constant="23" id="iCv-9t-qfP"/>
+                            <constraint firstItem="1m5-WN-s6H" firstAttribute="top" secondItem="Np3-Dh-ckp" secondAttribute="bottom" constant="276" id="ogz-2M-jZq"/>
+                            <constraint firstItem="pCc-tK-QUG" firstAttribute="centerX" secondItem="wEL-No-cds" secondAttribute="centerX" id="rwF-Jx-ToX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="academicYear" destination="1m5-WN-s6H" id="abl-mW-b98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn0-2n-I7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923" y="402"/>
+            <point key="canvasLocation" x="1964" y="418"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G28-57-Ip8">
